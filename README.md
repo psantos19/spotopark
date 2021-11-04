@@ -23,5 +23,4 @@ As aplicações pesquisadas mostram estacionamentos disponíveis nas zonas pesqu
 Em Portugal existe a aplicação ePark da Emel que permite aos utilizadores saberem todo o tipo de informações sobre os parquímetros e fazer o pagamento mas falando de lugares de estacionamento livres não foi possível encontrar concorrência. 
 
 Pedro Santos nº20200942
-
 Duarte Correia nº20200746
