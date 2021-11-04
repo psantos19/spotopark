@@ -1,7 +1,7 @@
 SpoToPark
 
 IADE - Faculdade de Design, Tecnologia e Comunicação
-Engenharia Informática — 3.º semestre
+Engenharia Informática - 3.º semestre
 
 Resumo: 
 A SpoToPark é uma aplicação que ajuda os cidadãos que conduzem regularmente a procurar lugares para estacionar com pagamento na própria aplicação ou até mesmo a reservar o lugar se necessário, a app fornece aos motoristas orientação em tempo real dos estacionamentos disponíveis nas ruas melhorando assim o acesso aos parques de estacionamento presentes nas cidades, tornando as cidades em cidades mais “inteligentes”. 
@@ -17,3 +17,10 @@ Esta aplicação visa facilitar a vida de pessoas que se deslocam regularmente n
 Descrição: 
 Ao entrar na aplicação o utilizador irá ter a possibilidade de se registar ou apenas utilizar a aplicação sem fazer o registo, após este passo o utilizador irá escolher o destino e aparecerão várias opções de estacionamento, ao escolher o estacionamento desejado a aplicação indicar-lhe-á o caminho até ao mesmo assim como informações detalhadas deste. Também será possível filtrar o tipo de pesquisa dos lugares de modo que apareçam por exemplo só lugares do tipo elétricos ou mesmo só lugares até um certo montante ou até mesmo para mostrar apenas estacionamentos de reserva. 
 Esta aplicação numa fase inicial abrangerá apenas a universidade do IADE e rua adjacente podendo no futuro ser ampliada para cidades ou até mesmo países. 
+
+Pesquisa de Mercado 
+As aplicações pesquisadas mostram estacionamentos disponíveis nas zonas pesquisadas e os respetivos preços a pagar mas não indicam lugares disponíveis na rua. 
+Em Portugal existe a aplicação ePark da Emel que permite aos utilizadores saberem todo o tipo de informações sobre os parquímetros e fazer o pagamento mas falando de lugares de estacionamento livres não foi possível encontrar concorrência. 
+
+Pedro Santos nº20200942
+Duarte Correia nº20200746
