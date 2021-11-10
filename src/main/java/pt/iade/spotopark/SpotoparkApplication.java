@@ -9,8 +9,6 @@ public class SpotoparkApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpotoparkApplication.class, args);
 
-
-		
 	}
 
 }
