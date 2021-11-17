@@ -18,38 +18,38 @@ public class UtilizadorController {
     private final Logger logger = LoggerFactory.getLogger(UtilizadorRepository.class);
     @Autowired
     private UtilizadorRepository utilizadorRepository;
-
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<utilizador> getUsers() {
-        logger.info("Sending all utilizadores!");
-        return UtilizadorRepository.findAll();
+    public Iterable<utilizador> getUtilizador()
+    {
+        logger.info("Sending all users!");
+        return utilizadorRepository.findAll();
     }
-
+    
     @GetMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public event getEvent(@PathVariable int id_event) {
-        logger.info("Sending event with id " + id_event);
-        Optional<event> event1 = eventRepository.findById(id_event);
-        if (!event1.isPresent())
-            throw new NotFoundException("" + id_event, "Event", "id");
+    public utilizador getUtilizador(@PathVariable int id_utilizador) {
+        logger.info("Sending user with id " + id_utilizador);
+        Optional<utilizador> utilizador1 =   utilizadorRepository.findById(id_utilizador);
+        if (!utilizador1.isPresent()) throw
+                new NotFoundException("" + id_utilizador, "User", "id");
         else
-            return event1.get();
+            return utilizador1.get();
     }
 
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public event saveEvent(@RequestBody event event) {
-        event savedEvent = eventRepository.save(event);
-        logger.info("Saving event with id " + savedEvent.getEvent_id());
-        return savedEvent;
+    public utilizador saveUtilizador(@RequestBody utilizador utilizador) {
+        utilizador savedUtilizador = utilizadorRepository.save(utilizador);
+        logger.info("Saving user with id " + savedUtilizador.getUser_id());
+        return savedUtilizador;
     }
 
     @DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Response deleteEvent(@PathVariable int id_event) {
-        logger.info("Deleting event with id " + id_event);
-        Optional<event> event1 = eventRepository.findById(id_event);
-        if (!event1.isPresent())
-            throw new NotFoundException("" + id_event, "event", "id");
+    public Response deleteUtilizador(@PathVariable int id_utilizador) {
+        logger.info("Deleting user with id " + id_utilizador);
+        Optional<utilizador> utilizador1 = utilizadorRepository.findById(id_utilizador);
+        if (!utilizador1.isPresent()) throw
+                new NotFoundException("" + id_utilizador, "user", "id");
         else
-            eventRepository.deleteById(id_event);
-        return new Response("Deleted event with id " + id_event, null);
+            utilizadorRepository.deleteById(id_utilizador);
+            return new Response("Deleted user with id " + id_utilizador, null);
     }
 }
