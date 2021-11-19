@@ -10,14 +10,14 @@ import java.util.Optional;
 import pt.iade.spotopark.models.parkingSlot;
 import pt.iade.spotopark.models.exceptions.NotFoundException;
 import pt.iade.spotopark.models.exceptions.Response;
-import pt.iade.spotopark.models.repositories.Parking_slotRepository;
+import pt.iade.spotopark.models.repositories.ParkingSlotRepository;
 
 @RestController
 @RequestMapping(path = "/api/parking_slot")
 public class ParkingSlotController {
-    private final Logger logger = LoggerFactory.getLogger(Parking_slotRepository.class);
+    private final Logger logger = LoggerFactory.getLogger(ParkingSlotRepository.class);
     @Autowired
-    private Parking_slotRepository parking_slotRepository;
+    private ParkingSlotRepository parking_slotRepository;
 
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<parkingSlot> getUsers() {

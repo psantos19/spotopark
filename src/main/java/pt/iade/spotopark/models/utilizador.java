@@ -25,6 +25,9 @@ public class utilizador {
     @Column(name = "utilizador_coordinates")
     private String coordinates;
 
+    public utilizador() {
+    }
+
     public int getId() {
         return id;
     }
