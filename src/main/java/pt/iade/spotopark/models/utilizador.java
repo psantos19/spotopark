@@ -25,24 +25,27 @@ public class utilizador {
     @Column(name = "user_coordinates")
     private String user_coordinates;
 
-    public int getUser_id(){
+    public int getUser_id() {
         return user_id;
     }
-    
-    public String getUser_name(){
+
+    public String getUser_name() {
         return user_name;
     }
-    
-    public String getUser_password(){
+
+    public String getUser_password() {
         return user_password;
     }
-    public String getUser_bdate(){
+
+    public String getUser_bdate() {
         return user_bdate;
     }
-    public String getUser_email(){
+
+    public String getUser_email() {
         return user_email;
     }
-    public String getUser_coordinates(){
+
+    public String getUser_coordinates() {
         return user_coordinates;
     }
 }

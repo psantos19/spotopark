@@ -5,6 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
+
 import java.util.Optional;
 
 import pt.iade.spotopark.models.utilizador;
@@ -35,11 +36,19 @@ public class UtilizadorController {
             return utilizador1.get();
     }
 
-    @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
+
+    /*@PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public utilizador saveUtilizador(@RequestBody utilizador utilizador) {
         utilizador savedUtilizador = utilizadorRepository.save(utilizador);
-        logger.info("Saving user with id " + savedUtilizador.getUser_id());
+        logger.info("Saving user with id " + savedUtilizador.getId());
         return savedUtilizador;
+    }*/
+
+    @PostMapping(path = "/new", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Response saveUtilizador(@RequestBody utilizador utilizadorId) {
+        logger.info("Registering user with id " + utilizadorId.getUser_id());
+        Integer inserted = utilizadorRepository.registerUtilizador(utilizadorId);
+    return new Response(inserted + " registration created", utilizadorId);
     }
 
     @DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
