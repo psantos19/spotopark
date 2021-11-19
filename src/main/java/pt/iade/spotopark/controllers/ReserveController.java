@@ -53,7 +53,7 @@ public class ReserveController {
         return new Response("Deleted reserve with id " + id_reserve, null);
     }
 
-    @GetMapping(path = "/reserve/parking", produces= MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/parking", produces= MediaType.APPLICATION_JSON_VALUE)
         public Iterable<String> getResPark() {
         return reserveRepository.getResPark();
    }
