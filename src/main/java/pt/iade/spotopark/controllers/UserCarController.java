@@ -10,14 +10,14 @@ import java.util.Optional;
 import pt.iade.spotopark.models.userCar;
 import pt.iade.spotopark.models.exceptions.NotFoundException;
 import pt.iade.spotopark.models.exceptions.Response;
-import pt.iade.spotopark.models.repositories.User_carRepository;
+import pt.iade.spotopark.models.repositories.UserCarRepository;
 
 @RestController
 @RequestMapping(path = "/api/user_car")
-public class User_carController {
-    private final Logger logger = LoggerFactory.getLogger(User_carRepository.class);
+public class UserCarController {
+    private final Logger logger = LoggerFactory.getLogger(UserCarRepository.class);
     @Autowired
-    private User_carRepository user_carRepository;
+    private UserCarRepository user_carRepository;
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<userCar> getUser_car()
     {

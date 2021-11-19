@@ -5,6 +5,6 @@ import org.springframework.data.repository.CrudRepository;
 
 import pt.iade.spotopark.models.userCar;
 
-public interface User_carRepository extends CrudRepository <userCar , Integer>{
+public interface UserCarRepository extends CrudRepository <userCar , Integer>{
 
 }

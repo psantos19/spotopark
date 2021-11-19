@@ -14,7 +14,7 @@ import pt.iade.spotopark.models.repositories.Parking_slotRepository;
 
 @RestController
 @RequestMapping(path = "/api/parking_slot")
-public class Parking_slotController {
+public class ParkingSlotController {
     private final Logger logger = LoggerFactory.getLogger(Parking_slotRepository.class);
     @Autowired
     private Parking_slotRepository parking_slotRepository;
