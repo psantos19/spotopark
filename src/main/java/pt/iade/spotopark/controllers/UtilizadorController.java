@@ -21,7 +21,7 @@ public class UtilizadorController {
     private UtilizadorRepository utilizadorRepository;
 
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<utilizador> getutilizadores() {
+    public Iterable<utilizador> getutilizador() {
         logger.info("Sending all users!");
         return utilizadorRepository.findAll();
     }
