@@ -52,4 +52,9 @@ public class Parking_slotController {
             parking_slotRepository.deleteById(id_parking_slot);
         return new Response("Deleted parking_slot with id " + id_parking_slot, null);
     }
+
+    @GetMapping(path = "/parking_slot", produces= MediaType.APPLICATION_JSON_VALUE)
+        public Iterable<String> getTypeNUm() {
+        return parking_slotRepository.getTypeNum();
+   }
 }

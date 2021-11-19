@@ -7,5 +7,4 @@ import pt.iade.spotopark.models.user_car;
 
 public interface User_carRepository extends CrudRepository <user_car , Integer>{
 
-    
 }
