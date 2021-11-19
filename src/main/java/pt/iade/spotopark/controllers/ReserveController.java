@@ -38,7 +38,7 @@ public class ReserveController {
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public reserve saveReserve(@RequestBody reserve reserve) {
         reserve savedReserve = reserveRepository.save(reserve);
-        logger.info("Saving reserve with id " + savedReserve.getReserve_id());
+        logger.info("Saving reserve with id " + savedReserve.getReserveId());
         return savedReserve;
     }
 

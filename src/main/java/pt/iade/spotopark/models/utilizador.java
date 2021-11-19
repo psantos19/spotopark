@@ -12,17 +12,17 @@ import javax.persistence.Table;
 public class utilizador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_id")
+    @Column(name = "utilizador_id")
     private int id;
-    @Column(name = "user_name")
+    @Column(name = "utilizador_name")
     private String name;
-    @Column(name = "user_password")
+    @Column(name = "utilizador_password")
     private String password;
-    @Column(name = "user_bdate")
+    @Column(name = "utilizador_bdate")
     private String bdate;
-    @Column(name = "user_email")
+    @Column(name = "utilizador_email")
     private String email;
-    @Column(name = "user_coordinates")
+    @Column(name = "utilizador_coordinates")
     private String coordinates;
 
     public int getId() {

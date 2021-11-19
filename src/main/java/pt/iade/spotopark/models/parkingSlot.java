@@ -9,31 +9,31 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "parking_slot")
-public class parking_slot {
+public class parkingSlot {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "parking_slot_id")
-    private int parking_slot_id;
+    private int parkingSlotId;
     @Column(name = "parking_slot_number")
-    private int parking_slot_number;
+    private int parkingSlotNumber;
     @Column(name = "parking_type_id")
-    private int parking_type_id;
+    private int parkingTypeId;
     @Column(name = "parking_park_id")
-    private int parking_park_id;
+    private int parkingParkId;
 
-    public int getParking_slot_id() {
-        return parking_slot_id;
+    public int getParkingSlotId() {
+        return parkingSlotId;
     }
 
-    public int getParking_slot_number() {
-        return parking_slot_number;
+    public int getParkingSlotNumber() {
+        return parkingSlotNumber;
     }
 
-    public int getParking_type_id() {
-        return parking_type_id;
+    public int getParkingTypeId() {
+        return parkingTypeId;
     }
 
-    public int getParking_park_id() {
-        return parking_park_id;
+    public int getParkingParkId() {
+        return parkingParkId;
     }
 }

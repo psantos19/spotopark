@@ -38,7 +38,7 @@ public class ParkingController {
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public parking saveParking(@RequestBody parking parking) {
         parking savedParking = parkingRepository.save(parking);
-        logger.info("Saving parking with id " + savedParking.getPark_id());
+        logger.info("Saving parking with id " + savedParking.getParkId());
         return savedParking;
     }
 

@@ -16,4 +16,3 @@ public interface ParkingRepository extends CrudRepository <parking, Integer> {
     @Query(value=resQuery1, nativeQuery=true)
     Iterable<String>getParkSpots();
 }
-

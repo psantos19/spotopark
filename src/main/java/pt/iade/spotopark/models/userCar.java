@@ -9,36 +9,36 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "user_car")
-public class user_car {
+public class userCar {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_car_id")
-    private int user_car_id;
+    private int userCarId;
     @Column(name = "user_car_plate")
-    private String user_car_plate;
+    private String userCarPlate;
     @Column(name = "user_car_year")
-    private int user_car_year;
+    private int userCarYear;
     @Column(name = "user_brand")
-    private String user_brand;
+    private String userBrand;
     @Column(name = "car_user_id")
-    private int car_user_id;
+    private int carUserId;
 
-    public int getUser_car_id(){
-        return user_car_id;
+    public int getUserCarId(){
+        return userCarId;
     }
     
-    public String getUser_car_plate(){
-        return user_car_plate;
+    public String getUserCarPlate(){
+        return userCarPlate;
     }
     
-    public int getUser_car_year(){
-        return user_car_year;
+    public int getUserCarYear(){
+        return userCarYear;
     }
-    public String getUser_brand(){
-        return user_brand;
+    public String getUserBrand(){
+        return userBrand;
     }
 
-    public int getCar_user_id(){
-        return car_user_id;
+    public int getCarUserId(){
+        return carUserId;
     }
 }

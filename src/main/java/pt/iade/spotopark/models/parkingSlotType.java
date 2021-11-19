@@ -9,19 +9,19 @@ import javax.persistence.Table;
 
 @Entity
 @Table(name = "parking_slot_type")
-public class parking_slot_type {
+public class parkingSlotType {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "type_id ")
-    private int type_id ;
+    private int typeId;
     @Column(name = "type_name ")
-    private String type_name ;
+    private String typeName;
 
-    public int getType_id() {
-        return type_id;
+    public int getTypeId() {
+        return typeId;
     }
 
-    public String getType_name() {
-        return type_name;
+    public String getTypeName() {
+        return typeName;
     }
 }

@@ -7,7 +7,7 @@ import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
-import pt.iade.spotopark.models.parking_slot_type;
+import pt.iade.spotopark.models.parkingSlotType;
 import pt.iade.spotopark.models.exceptions.NotFoundException;
 import pt.iade.spotopark.models.exceptions.Response;
 import pt.iade.spotopark.models.repositories.Parking_slot_typeRepository;
@@ -20,15 +20,15 @@ public class Parking_slot_typeController {
     private Parking_slot_typeRepository parking_slot_typeRepository;
 
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<parking_slot_type> getUsers() {
+    public Iterable<parkingSlotType> getUsers() {
         logger.info("Sending all parking_slot_types!");
         return parking_slot_typeRepository.findAll();
     }
 
     @GetMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public parking_slot_type getParking_slot_type(@PathVariable int id_parking_slot_type) {
+    public parkingSlotType getParking_slot_type(@PathVariable int id_parking_slot_type) {
         logger.info("Sending parking_slot_type with id " + id_parking_slot_type);
-        Optional<parking_slot_type> parking_slot_type1 = parking_slot_typeRepository.findById(id_parking_slot_type);
+        Optional<parkingSlotType> parking_slot_type1 = parking_slot_typeRepository.findById(id_parking_slot_type);
         if (!parking_slot_type1.isPresent())
             throw new NotFoundException("" + id_parking_slot_type, "Parking_slot_type", "id");
         else
@@ -36,16 +36,16 @@ public class Parking_slot_typeController {
     }
 
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public parking_slot_type saveParking_slot_type(@RequestBody parking_slot_type parking_slot_type) {
-        parking_slot_type savedParking_slot_type = parking_slot_typeRepository.save(parking_slot_type);
-        logger.info("Saving parking_slot_type with id " + savedParking_slot_type.getType_id());
+    public parkingSlotType saveParking_slot_type(@RequestBody parkingSlotType parking_slot_type) {
+        parkingSlotType savedParking_slot_type = parking_slot_typeRepository.save(parking_slot_type);
+        logger.info("Saving parking_slot_type with id " + savedParking_slot_type.getTypeId());
         return savedParking_slot_type;
     }
 
     @DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response deleteParking_slot_type(@PathVariable int id_parking_slot_type) {
         logger.info("Deleting parking_slot_type with id " + id_parking_slot_type);
-        Optional<parking_slot_type> parking_slot_type1 = parking_slot_typeRepository.findById(id_parking_slot_type);
+        Optional<parkingSlotType> parking_slot_type1 = parking_slot_typeRepository.findById(id_parking_slot_type);
         if (!parking_slot_type1.isPresent())
             throw new NotFoundException("" + id_parking_slot_type, "Parking_slot_type", "id");
         else

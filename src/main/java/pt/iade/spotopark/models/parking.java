@@ -13,21 +13,21 @@ public class parking {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "park_id")
-    private int park_id;
+    private int parkId;
     @Column(name = "park_address")
-    private int park_address;
+    private int parkAddress;
     @Column(name = "park_coordinates")
-    private int park_coordinates;
+    private int parkCoordinates;
    
-    public int getPark_id() {
-        return park_id;
+    public int getParkId() {
+        return parkId;
     }
 
     public int getPark_address() {
-        return park_address;
+        return parkAddress;
     }
 
     public int getPark_coordinates() {
-        return park_coordinates;
+        return parkCoordinates;
     }
 }
