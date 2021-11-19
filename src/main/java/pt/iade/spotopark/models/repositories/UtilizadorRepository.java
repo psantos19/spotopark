@@ -13,7 +13,8 @@ public interface UtilizadorRepository extends CrudRepository<utilizador, Integer
     @Modifying
     @Transactional
     @Query(value = "insert into utilizador (user_id, user_name, user_password, user_bdate,"
-            + "user_email, user_coordinates)" + "values(:#{#user.id}, :#{#user.name}, :#{#user.password}, "
-            + ":#{#user.bdate}, :#{#user.email}" + ", :#{#user.coordinates})", nativeQuery = true)
+            + "user_email, user_coordinates)"
+            + "values(:#{#utilizador.id}, :#{#utilizador.name}, :#{#utilizador.password}, "
+            + ":#{#utilizador.bdate}, :#{#utilizador.email}" + ", :#{#utilizador.coordinates})", nativeQuery = true)
     Integer registerUtilizador(@Param("utilizador") utilizador utilizador);
 }
