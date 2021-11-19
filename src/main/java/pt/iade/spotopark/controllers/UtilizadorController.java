@@ -19,48 +19,47 @@ public class UtilizadorController {
     private final Logger logger = LoggerFactory.getLogger(UtilizadorRepository.class);
     @Autowired
     private UtilizadorRepository utilizadorRepository;
+
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<utilizador> getUtilizador()
-    {
+    public Iterable<utilizador> getUtilizador() {
         logger.info("Sending all users!");
         return utilizadorRepository.findAll();
     }
-    
+
     @GetMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public utilizador getUtilizador(@PathVariable int id_utilizador) {
         logger.info("Sending user with id " + id_utilizador);
-        Optional<utilizador> utilizador1 =   utilizadorRepository.findById(id_utilizador);
-        if (!utilizador1.isPresent()) throw
-                new NotFoundException("" + id_utilizador, "User", "id");
+        Optional<utilizador> utilizador1 = utilizadorRepository.findById(id_utilizador);
+        if (!utilizador1.isPresent())
+            throw new NotFoundException("" + id_utilizador, "User", "id");
         else
             return utilizador1.get();
     }
 
-
-    /*@PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public utilizador saveUtilizador(@RequestBody utilizador utilizador) {
-        utilizador savedUtilizador = utilizadorRepository.save(utilizador);
-        logger.info("Saving user with id " + savedUtilizador.getId());
-        return savedUtilizador;
-    }*/
+    /*
+     * @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE) public
+     * utilizador saveUtilizador(@RequestBody utilizador utilizador) { utilizador
+     * savedUtilizador = utilizadorRepository.save(utilizador);
+     * logger.info("Saving user with id " + savedUtilizador.getId()); return
+     * savedUtilizador; }
+     */
 
     @PostMapping(path = "/new", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response saveUtilizador(@RequestBody utilizador utilizadorId) {
         logger.info("Registering user with id " + utilizadorId.getId());
         Integer inserted = utilizadorRepository.registerUtilizador(utilizadorId);
-    return new Response(inserted + " registration created", utilizadorId);
+        return new Response(inserted + " registration created ", utilizadorId);
     }
 
     @DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response deleteUtilizador(@PathVariable int id_utilizador) {
         logger.info("Deleting user with id " + id_utilizador);
         Optional<utilizador> utilizador1 = utilizadorRepository.findById(id_utilizador);
-        if (!utilizador1.isPresent()) throw
-                new NotFoundException("" + id_utilizador, "user", "id");
+        if (!utilizador1.isPresent())
+            throw new NotFoundException("" + id_utilizador, "user", "id");
         else
             utilizadorRepository.deleteById(id_utilizador);
-            return new Response("Deleted user with id " + id_utilizador, null);
+        return new Response("Deleted user with id " + id_utilizador, null);
     }
 
-    
 }

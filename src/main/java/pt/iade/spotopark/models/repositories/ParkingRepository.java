@@ -8,9 +8,9 @@ import pt.iade.spotopark.models.parking;
 
 public interface ParkingRepository extends CrudRepository <parking, Integer> {
     // ver quantos lugares tem um parque
-    String resQuery1 = "select park_address , count(*)"
-    + "from parking , parking_slot" +
-    "where park_id = parking_park_id" + 
+    String resQuery1 = "select park_address , count(*) "
+    + "from parking , parking_slot " +
+    "where park_id = parking_park_id " + 
     "group by park_address"; 
 
     @Query(value=resQuery1, nativeQuery=true)
