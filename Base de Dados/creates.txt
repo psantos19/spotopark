@@ -1,0 +1,75 @@
+create table utilizador(
+	utilizador_id SERIAL not null, 
+	utilizador_name VARCHAR(60) not null, 
+	utilizador_password VARCHAR(60) not null,
+	utilizador_bdate date not null, 
+	utilizador_email VARCHAR(60) not null, 
+	utilizador_coordinates VARCHAR(60) not null,
+	primary key(utilizador_id)
+); 
+
+create table user_car(
+	user_car_id SERIAL not null, 
+	user_car_plate VARCHAR(30) not null,
+	user_car_year INT not null, 
+	user_brand VARCHAR(30) not null,
+	car_user_id INT not null,
+	primary key (user_car_id)
+
+); 
+
+create table reserve(
+	reserve_id SERIAL not null, 
+	reserve_ask_time timestamp not null, 
+	reserve_start_time timestamp not null, 
+	reserve_end_time timestamp not null, 
+	reserve_car_id INT not null, 
+	reserve_parking_slot_id INT not null, 
+	primary key (reserve_id)
+); 
+
+create table parking_slot(
+	parking_slot_id SERIAL not null, 
+	parking_slot_number INT not null, 
+	parking_type_id INT not null, 
+	parking_park_id INT not null, 
+	primary key (parking_slot_id)
+); 
+
+create table parking(
+	park_id SERIAL not null, 
+	park_address VARCHAR(60) not null, 
+	park_coordinates VARCHAR(60) not null, 
+	primary key (park_id)
+); 
+
+create table parking_slot_type(
+	type_id SERIAL not null, 
+	type_name VARCHAR(60) not null,
+	primary key (type_id)
+); 
+
+alter table user_car
+add constraint user_car_fk_user
+foreign key (car_user_id) references utilizador(utilizador_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+alter table reserve
+add constraint reserve_fk_user_car
+foreign key (reserve_car_id) references user_car(user_car_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+alter table reserve
+add constraint reserve_fk_parking_slot
+foreign key (reserve_parking_slot_id) references parking_slot(parking_slot_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+alter table parking_slot
+add constraint parking_slot_fk_parking_slot_type
+foreign key (parking_type_id) references parking_slot_type(type_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;
+
+alter table parking_slot
+add constraint parking_slot_fk_parking
+foreign key (parking_park_id) references parking(park_id) 
+ON DELETE NO ACTION ON UPDATE NO ACTION;
