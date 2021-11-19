@@ -13,39 +13,39 @@ public class utilizador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "user_id")
-    private int user_id;
+    private int id;
     @Column(name = "user_name")
-    private String user_name;
+    private String name;
     @Column(name = "user_password")
-    private String user_password;
+    private String password;
     @Column(name = "user_bdate")
-    private String user_bdate;
+    private String bdate;
     @Column(name = "user_email")
-    private String user_email;
+    private String email;
     @Column(name = "user_coordinates")
-    private String user_coordinates;
+    private String coordinates;
 
-    public int getUser_id() {
-        return user_id;
+    public int getId() {
+        return id;
     }
 
-    public String getUser_name() {
-        return user_name;
+    public String getName() {
+        return name;
     }
 
-    public String getUser_password() {
-        return user_password;
+    public String getPassword() {
+        return password;
     }
 
-    public String getUser_bdate() {
-        return user_bdate;
+    public String getBdate() {
+        return bdate;
     }
 
-    public String getUser_email() {
-        return user_email;
+    public String getEmail() {
+        return email;
     }
 
-    public String getUser_coordinates() {
-        return user_coordinates;
+    public String getCoordinates() {
+        return coordinates;
     }
 }
