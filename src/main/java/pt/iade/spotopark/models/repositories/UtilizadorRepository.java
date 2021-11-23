@@ -12,9 +12,8 @@ import pt.iade.spotopark.models.utilizador;
 public interface UtilizadorRepository extends CrudRepository<utilizador, Integer> {
     @Modifying
     @Transactional
-    @Query(value = "insert into utilizador (user_name, user_password, user_bdate, " 
-            + "user_email, user_coordinates)"
-            + " values(:#{#utilizador.name}, :#{#utilizador.password}, "
+    @Query(value = "insert into utilizador (utilizador_name, utilizador_password, utilizador_bdate, "
+            + "utilizador_email, utilizador_coordinates)" + " values(:#{#utilizador.name}, :#{#utilizador.password}, "
             + ":#{#utilizador.bdate}, :#{#utilizador.email}" + ", :#{#utilizador.coordinates})", nativeQuery = true)
     Integer registerUtilizador(@Param("utilizador") utilizador utilizador);
 }
