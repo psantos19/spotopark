@@ -28,11 +28,11 @@ public class ReserveController {
     @GetMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public reserve getReserve(@PathVariable int reserveId) {
         logger.info("Sending reserve with id " + reserveId);
-        Optional<reserve> reserve1 = reserveRepository.findById(reserveId);
-        if (!reserve1.isPresent())
+        Optional<reserve> _reserve = reserveRepository.findById(reserveId);
+        if (!_reserve.isPresent())
             throw new NotFoundException("" + reserveId, "Reserve", "id");
         else
-            return reserve1.get();
+            return _reserve.get();
     }
 
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
