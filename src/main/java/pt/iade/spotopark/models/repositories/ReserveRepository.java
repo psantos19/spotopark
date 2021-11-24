@@ -12,5 +12,5 @@ public interface ReserveRepository extends CrudRepository <reserve, Integer> {
     "where reserve_parking_slot_id = parking_slot_id and park_id = parking_park_id"; 
 
     @Query(value=resQuery2, nativeQuery=true)
-    Iterable<String>getResPark();
+    Iterable<String>getParkRes();
 }

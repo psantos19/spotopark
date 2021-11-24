@@ -26,11 +26,11 @@ public class ReserveController {
     }
 
     @GetMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
-    public reserve getReserve(@PathVariable int id_reserve) {
-        logger.info("Sending reserve with id " + id_reserve);
-        Optional<reserve> reserve1 = reserveRepository.findById(id_reserve);
+    public reserve getReserve(@PathVariable int reserveId) {
+        logger.info("Sending reserve with id " + reserveId);
+        Optional<reserve> reserve1 = reserveRepository.findById(reserveId);
         if (!reserve1.isPresent())
-            throw new NotFoundException("" + id_reserve, "Reserve", "id");
+            throw new NotFoundException("" + reserveId, "Reserve", "id");
         else
             return reserve1.get();
     }
@@ -54,8 +54,8 @@ public class ReserveController {
     }
 
     @GetMapping(path = "/parking", produces= MediaType.APPLICATION_JSON_VALUE)
-        public Iterable<String> getResPark() {
-        return reserveRepository.getResPark();
+        public Iterable<String> getParkRes() {
+        return reserveRepository.getParkRes();
    }
 }
 
