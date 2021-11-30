@@ -29,11 +29,11 @@ public class UtilizadorController {
     @GetMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public utilizador getUtilizador(@PathVariable int id) {
         logger.info("Sending user with id " + id);
-        Optional<utilizador> _utilizador = utilizadorRepository.findById(id);
-        if (!_utilizador.isPresent())
+        Optional<utilizador> utilizador = utilizadorRepository.findById(id);
+        if (!utilizador.isPresent())
             throw new NotFoundException("" + id, "User", "id");
         else
-            return _utilizador.get();
+            return utilizador.get();
     }
 
     /*
@@ -48,18 +48,19 @@ public class UtilizadorController {
     public Response saveUtilizador(@RequestBody utilizador utilizadorId) {
         logger.info("Registering user with id " + utilizadorId.getId());
         Integer inserted = utilizadorRepository.registerUtilizador(utilizadorId);
-        return new Response(inserted + " registration created", utilizadorId);
+        return new Response(inserted+"registration created",utilizadorId);
     }
 
     @DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response deleteUtilizador(@PathVariable int id) {
         logger.info("Deleting user with id " + id);
-        Optional<utilizador> _utilizador = utilizadorRepository.findById(id);
-        if (!_utilizador.isPresent())
+        Optional<utilizador> utilizador = utilizadorRepository.findById(id);
+        if (!utilizador.isPresent())
             throw new NotFoundException("" + id, "user", "id");
         else
             utilizadorRepository.deleteById(id);
         return new Response("Deleted user with id " + id, null);
     }
 
+    
 }
