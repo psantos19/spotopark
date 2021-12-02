@@ -53,7 +53,7 @@ public class ParkingSlotController {
         return new Response("Deleted parking_slot with id " + id_parking_slot, null);
     }
 
-    @GetMapping(path = "/parking_slot", produces= MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/type", produces= MediaType.APPLICATION_JSON_VALUE)
         public Iterable<String> getTypeNUm() {
         return parking_slotRepository.getTypeNum();
    }
