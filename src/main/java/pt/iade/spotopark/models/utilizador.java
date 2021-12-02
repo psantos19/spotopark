@@ -1,5 +1,7 @@
 package pt.iade.spotopark.models;
 
+import java.time.LocalDate;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -15,14 +17,11 @@ public class utilizador {
     @Column(name = "utilizador_id") private int id;
     @Column(name = "utilizador_name") private String name;
     @Column(name = "utilizador_password") private String password;
-    @Column(name = "utilizador_bdate") private String bdate;
+    @Column(name = "utilizador_bdate") private LocalDate bdate;
     @Column(name = "utilizador_email") private String email;
     @Column(name = "utilizador_coordinates") private String coordinates;
 
-    public utilizador() {
-
-        
-    }
+    public utilizador() {}
 
     public int getId() {
         return id;
@@ -36,7 +35,7 @@ public class utilizador {
         return password;
     }
 
-    public String getBdate() {
+    public LocalDate getBdate() {
         return bdate;
     }
 
