@@ -7,6 +7,7 @@ import pt.iade.spotopark.models.reserve;
 
 public interface ReserveRepository extends CrudRepository <reserve, Integer> {
     //Saber qual o parque associado a uma reserva
+    // https://spotopark-projeto.herokuapp.com/api/reserve/park
     String resQuery2 = "select reserve_id , park_id, park_address "
     + "from reserve , parking_slot , parking " +
     "where reserve_parking_slot_id = parking_slot_id and park_id = parking_park_id"; 
