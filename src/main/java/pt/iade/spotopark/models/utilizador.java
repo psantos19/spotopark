@@ -14,31 +14,32 @@ import javax.persistence.Table;
 public class utilizador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "utilizador_id", nullable = false) 
+    @Column(name = "utilizador_id", nullable = false)
     private int id;
 
-    @Column(name = "utilizador_name", nullable = false, length = 60) 
+    @Column(name = "utilizador_name", nullable = false, length = 60)
     private String name;
 
-    @Column(name = "utilizador_password", length = 60) 
+    @Column(name = "utilizador_password", length = 60)
     private String password;
 
-    @Column(name = "utilizador_bdate", nullable = false) 
+    @Column(name = "utilizador_bdate", nullable = false)
     private LocalDate bdate;
 
-    @Column(name = "utilizador_email", length = 100) 
+    @Column(name = "utilizador_email", length = 100)
     private String email;
 
-    @Column(name = "utilizador_coordinates", length = 100) 
+    @Column(name = "utilizador_coordinates", length = 100)
     private String coordinates;
 
-    public utilizador() {}
+    public utilizador() {
+    }
 
     public int getId() {
         return id;
     }
 
-    public void setId(Integer id) {
+    public void setId(int id) {
         this.id = id;
     }
 

@@ -27,20 +27,21 @@ public class reserve {
     @Column(name = "reserve_parking_slotId", nullable = false)
     private int reserveParkingSlotId;
 
-    public reserve() {}
+    public reserve() {
+    }
 
     public int getReserveId() {
         return reserveId;
     }
 
-    public void getReserveId(Integer reserveId) {
+    public void setReserveId(int reserveId) {
         this.reserveId = reserveId;
     }
 
     public Timestamp getReserveAskTime() {
         return reserveAskTime;
     }
-    
+
     public void setReserveAskTime(Timestamp reserveAskTime) {
         this.reserveAskTime = reserveAskTime;
     }
@@ -65,7 +66,7 @@ public class reserve {
         return reserveCarId;
     }
 
-    public void setReserveCarId(Integer reserveCarId) {
+    public void setReserveCarId(int reserveCarId) {
         this.reserveCarId = reserveCarId;
     }
 
@@ -73,7 +74,8 @@ public class reserve {
         return reserveParkingSlotId;
     }
 
-    public void setReserveParkingSlotId(Integer reserveParkingSlotId) {
+    public void setReserveParkingSlotId(int reserveParkingSlotId) {
         this.reserveParkingSlotId = reserveParkingSlotId;
     }
+
 }

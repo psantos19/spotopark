@@ -18,11 +18,13 @@ public class parkingSlotType {
     @Column(name = "type_name ", nullable = false, length = 30)
     private String typeName;
 
+    public parkingSlotType(){}
+
     public int getTypeId() {
         return typeId;
     }
 
-    public void setTypeId(Integer typeId) {
+    public void setTypeId(int typeId) {
         this.typeId = typeId;
     }
 
@@ -33,4 +35,6 @@ public class parkingSlotType {
     public void setTypeName(String typeName) {
         this.typeName = typeName;
     }
+
+    
 }

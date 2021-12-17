@@ -23,30 +23,46 @@ public class userCar {
     @Column(name = "car_user_id", nullable = false)
     private int carUserId;
 
-    public int getUserCarId(){
+    public userCar() {
+    }
+
+    public int getUserCarId() {
         return userCarId;
     }
 
-    public void setUserCarId(Integer userCarId) {
+    public void setUserCarId(int userCarId) {
         this.userCarId = userCarId;
     }
-    
-    public String getUserCarPlate(){
+
+    public String getUserCarPlate() {
         return userCarPlate;
     }
 
     public void setUserCarPlate(String userCarPlate) {
         this.userCarPlate = userCarPlate;
     }
-    
-    public int getUserCarYear(){
+
+    public int getUserCarYear() {
         return userCarYear;
     }
-    public String getUserBrand(){
+
+    public void setUserCarYear(int userCarYear) {
+        this.userCarYear = userCarYear;
+    }
+
+    public String getUserBrand() {
         return userBrand;
     }
 
-    public int getCarUserId(){
+    public void setUserBrand(String userBrand) {
+        this.userBrand = userBrand;
+    }
+
+    public int getCarUserId() {
         return carUserId;
+    }
+
+    public void setCarUserId(int carUserId) {
+        this.carUserId = carUserId;
     }
 }
