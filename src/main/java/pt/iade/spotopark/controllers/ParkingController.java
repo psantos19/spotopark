@@ -58,8 +58,8 @@ public class ParkingController {
         return new Response("Deleted parking with id " + id_parking, null);
     }
 
-    @GetMapping(path = "/parking_slot", produces= MediaType.APPLICATION_JSON_VALUE)
-        public Iterable<parkingSlot> getParkSpots() {
-        return parkingSlotRepository.getParkSpots();
+    @GetMapping(path = "/parking_slot/{id:[0-9]+}", produces= MediaType.APPLICATION_JSON_VALUE)
+        public Iterable<parkingSlot> getParkSpots(@PathVariable int id) {
+        return parkingSlotRepository.getParkSpots(id);
    }
 }

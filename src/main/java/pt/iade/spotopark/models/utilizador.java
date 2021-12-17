@@ -9,17 +9,15 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
-import org.apache.tomcat.jni.Local;
-
 @Entity
 @Table(name = "utilizador")
 public class utilizador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "utilizador_id", nullable = false, length = 60) 
+    @Column(name = "utilizador_id", nullable = false) 
     private int id;
 
-    @Column(name = "utilizador_name", nullable = false) 
+    @Column(name = "utilizador_name", nullable = false, length = 60) 
     private String name;
 
     @Column(name = "utilizador_password", length = 60) 

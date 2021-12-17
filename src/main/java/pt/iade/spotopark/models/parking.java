@@ -15,34 +15,33 @@ public class parking {
     @Column(name = "park_id", nullable = false)
     private int parkId;
     @Column(name = "park_address", nullable = false, length = 60)
-    private int parkAddress;
+    private String parkAddress;
     @Column(name = "park_coordinates", nullable = false, length = 60)
-    private int parkCoordinates;
+    private String parkCoordinates;
    
     public parking(){}
 
     public int getParkId() {
         return parkId;
     }
-    
-    public void setParkId(Integer parkId) {
+
+    public void setParkId(int parkId) {
         this.parkId = parkId;
     }
 
-    public int getPark_address() {
+    public String getParkAddress() {
         return parkAddress;
     }
 
-    public void setParkAddress(Integer parkAddress) {
+    public void setParkAddress(String parkAddress) {
         this.parkAddress = parkAddress;
     }
 
-    public int getPark_coordinates() {
+    public String getParkCoordinates() {
         return parkCoordinates;
     }
 
-    public void setParkCoordinates(Integer parkCoordinates) {
+    public void setParkCoordinates(String parkCoordinates) {
         this.parkCoordinates = parkCoordinates;
     }
-
 }
