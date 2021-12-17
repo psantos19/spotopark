@@ -9,17 +9,30 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
 
+import org.apache.tomcat.jni.Local;
+
 @Entity
 @Table(name = "utilizador")
 public class utilizador {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "utilizador_id") private int id;
-    @Column(name = "utilizador_name") private String name;
-    @Column(name = "utilizador_password") private String password;
-    @Column(name = "utilizador_bdate") private LocalDate bdate;
-    @Column(name = "utilizador_email") private String email;
-    @Column(name = "utilizador_coordinates") private String coordinates;
+    @Column(name = "utilizador_id", nullable = false, length = 60) 
+    private int id;
+
+    @Column(name = "utilizador_name", nullable = false) 
+    private String name;
+
+    @Column(name = "utilizador_password", length = 60) 
+    private String password;
+
+    @Column(name = "utilizador_bdate", nullable = false) 
+    private LocalDate bdate;
+
+    @Column(name = "utilizador_email", length = 100) 
+    private String email;
+
+    @Column(name = "utilizador_coordinates", length = 100) 
+    private String coordinates;
 
     public utilizador() {}
 
@@ -27,23 +40,47 @@ public class utilizador {
         return id;
     }
 
+    public void setId(Integer id) {
+        this.id = id;
+    }
+
     public String getName() {
         return name;
+    }
+
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getPassword() {
         return password;
     }
 
+    public void setPassword(String password) {
+        this.password = password;
+    }
+
     public LocalDate getBdate() {
         return bdate;
+    }
+
+    public void setBdate(LocalDate bdate) {
+        this.bdate = bdate;
     }
 
     public String getEmail() {
         return email;
     }
 
+    public void setEmail(String email) {
+        this.email = email;
+    }
+
     public String getCoordinates() {
         return coordinates;
+    }
+
+    public void setCoordinates(String coordinates) {
+        this.coordinates = coordinates;
     }
 }

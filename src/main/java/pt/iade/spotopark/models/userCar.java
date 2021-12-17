@@ -12,23 +12,31 @@ import javax.persistence.Table;
 public class userCar {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "user_car_id")
+    @Column(name = "user_car_id", nullable = false)
     private int userCarId;
-    @Column(name = "user_car_plate")
+    @Column(name = "user_car_plate", nullable = false, length = 60)
     private String userCarPlate;
-    @Column(name = "user_car_year")
+    @Column(name = "user_car_year", nullable = false)
     private int userCarYear;
-    @Column(name = "user_brand")
+    @Column(name = "user_brand", nullable = false, length = 30)
     private String userBrand;
-    @Column(name = "car_user_id")
+    @Column(name = "car_user_id", nullable = false)
     private int carUserId;
 
     public int getUserCarId(){
         return userCarId;
     }
+
+    public void setUserCarId(Integer userCarId) {
+        this.userCarId = userCarId;
+    }
     
     public String getUserCarPlate(){
         return userCarPlate;
+    }
+
+    public void setUserCarPlate(String userCarPlate) {
+        this.userCarPlate = userCarPlate;
     }
     
     public int getUserCarYear(){

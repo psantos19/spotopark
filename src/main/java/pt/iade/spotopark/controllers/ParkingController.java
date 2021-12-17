@@ -8,9 +8,11 @@ import org.springframework.web.bind.annotation.*;
 import java.util.Optional;
 
 import pt.iade.spotopark.models.parking;
+import pt.iade.spotopark.models.parkingSlot;
 import pt.iade.spotopark.models.exceptions.NotFoundException;
 import pt.iade.spotopark.models.exceptions.Response;
 import pt.iade.spotopark.models.repositories.ParkingRepository;
+import pt.iade.spotopark.models.repositories.ParkingSlotRepository;
 
 @RestController
 @RequestMapping(path = "/api/parking")
@@ -18,6 +20,9 @@ public class ParkingController {
     private final Logger logger = LoggerFactory.getLogger(ParkingRepository.class);
     @Autowired
     private ParkingRepository parkingRepository;
+
+    @Autowired
+    private ParkingSlotRepository parkingSlotRepository;
 
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<parking> getUsers() {
@@ -54,7 +59,7 @@ public class ParkingController {
     }
 
     @GetMapping(path = "/parking_slot", produces= MediaType.APPLICATION_JSON_VALUE)
-        public Iterable<String> getParkSpots() {
-        return parkingRepository.getParkSpots();
+        public Iterable<parkingSlot> getParkSpots() {
+        return parkingSlotRepository.getParkSpots();
    }
 }

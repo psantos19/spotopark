@@ -55,6 +55,6 @@ public class ParkingSlotController {
 
     /*@GetMapping(path = "/type", produces= MediaType.APPLICATION_JSON_VALUE)
         public Iterable<String> getTypeNUm() {
-        return parking_slotRepository.getTypeNum(); }*/
+        return parking_slotRepository.getTypeNum(); } */
    
 }

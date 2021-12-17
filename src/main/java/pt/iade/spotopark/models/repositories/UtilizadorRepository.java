@@ -18,4 +18,5 @@ public interface UtilizadorRepository extends CrudRepository<utilizador, Integer
             ":#{#utilizador.bdate}, :#{#utilizador.email}, " +
             ":#{#utilizador.coordinates} )", nativeQuery = true)
     Integer registerUtilizador(@Param("utilizador") utilizador utilizador);
+
 }
