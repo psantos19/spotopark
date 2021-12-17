@@ -27,6 +27,8 @@ public class reserve {
     @Column(name = "reserve_parking_slotId", nullable = false)
     private int reserveParkingSlotId;
 
+    public reserve() {}
+
     public int getReserveId() {
         return reserveId;
     }
