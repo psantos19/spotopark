@@ -13,6 +13,6 @@ public interface ParkingSlotRepository extends CrudRepository<parkingSlot, Integ
     "where park_id = parking_park_id " + 
     "group by park_address"; 
 
-    @Query(value=resQuery1, nativeQuery=true)
+    @Query(value="select * from parking_slot where park_id = parking_park_id", nativeQuery=true)
     Iterable<parkingSlot>getParkSpots();
 }
