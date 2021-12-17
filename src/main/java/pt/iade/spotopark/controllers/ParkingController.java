@@ -54,7 +54,7 @@ public class ParkingController {
     }
 
     @GetMapping(path = "/parking_slot", produces= MediaType.APPLICATION_JSON_VALUE)
-        public Iterable<String> getParkSpots() {
+        public Iterable<parking> getParkSpots() {
         return parkingRepository.getParkSpots();
    }
 }

@@ -19,6 +19,8 @@ public class parking {
     @Column(name = "park_coordinates")
     private int parkCoordinates;
    
+    public parking(){}
+
     public int getParkId() {
         return parkId;
     }
