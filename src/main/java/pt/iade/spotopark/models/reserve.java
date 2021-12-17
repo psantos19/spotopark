@@ -24,7 +24,7 @@ public class reserve {
     private Timestamp reserveEndTime;
     @Column(name = "reserve_car_id", nullable = false)
     private int reserveCarId;
-    @Column(name = "reserve_parking_slotId", nullable = false)
+    @Column(name = "reserve_parking_slot_id", nullable = false)
     private int reserveParkingSlotId;
 
     public reserve() {
