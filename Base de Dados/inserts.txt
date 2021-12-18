@@ -1,0 +1,93 @@
+INSERT INTO parking (park_address, park_coordinates) VALUES ('Av. 24 de Julho', '38.706984, -9.151735');
+INSERT INTO parking (park_address, park_coordinates) VALUES ('Rua Dom Luís I', '38.708030, -9.147979');
+
+INSERT INTO parking_slot_type (type_name) VALUES ('Normal');
+INSERT INTO parking_slot_type (type_name) VALUES ('Handicap');
+INSERT INTO parking_slot_type (type_name) VALUES ('Eletric');
+INSERT INTO parking_slot_type (type_name) VALUES ('Motorcycle');
+INSERT INTO parking_slot_type (type_name) VALUES ('Covered');
+
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (1,2,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (2,2,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (3,2,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (4,2,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (5,2,1);
+
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (6,3,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (7,3,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (8,3,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (9,3,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (10,3,1);
+
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (11,1,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (12,1,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (13,1,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (14,1,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (15,1,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (16,1,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (17,1,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (18,1,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (19,1,1);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (20,1,1);
+
+
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (21,2,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (22,2,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (23,2,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (24,2,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (25,2,2);
+
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (26,3,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (27,3,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (28,3,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (29,3,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (30,3,2);
+
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (31,1,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (32,1,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (33,1,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (34,1,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (35,1,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (36,1,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (37,1,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (38,1,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (39,1,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (40,1,2);
+
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (41,4,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (42,4,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (43,4,2);
+
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (44,5,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (45,5,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (46,5,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (47,5,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (48,5,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (49,5,2);
+INSERT INTO parking_slot (parking_slot_number, parking_type_id ,parking_park_id ) VALUES (50,5,2);
+
+
+INSERT INTO utilizador (utilizador_name, utilizador_password, utilizador_bdate, utilizador_email, utilizador_coordinates) VALUES ('Pedro Santos', 'pedro2725', '2002-05-19', 'pedrosantos@gmail.com', '38.797548, -9.3423096');
+
+INSERT INTO utilizador (utilizador_name, utilizador_password, utilizador_bdate, utilizador_email, utilizador_coordinates) VALUES ('Duarte Correia', 'duarte2675', '2002-08-19', 'duartecorreia@gmail.com', '38.7930065, -9.1738903');
+
+INSERT INTO utilizador (utilizador_name, utilizador_password, utilizador_bdate, utilizador_email, utilizador_coordinates) VALUES ('Ricardo Abrantes', 'ricardo2910', '2001-02-20', 'ricardoabrantes@gmail.com', '38.5229968,-8.8695488');
+
+INSERT INTO utilizador (utilizador_name, utilizador_password, utilizador_bdate, utilizador_email, utilizador_coordinates) VALUES ('Luís Silva', 'luis2780', '2002-05-11', 'luissilva@gmail.com', '38.6923329,-9.3296341');
+
+INSERT INTO user_car (user_car_plate, user_car_year, user_brand,car_user_id) VALUES ('45-NS-20',2011,'Mercedes',1);
+
+INSERT INTO user_car (user_car_plate, user_car_year, user_brand,car_user_id) VALUES ('78-HJ-10',2018,'BMW',2);
+
+INSERT INTO user_car (user_car_plate, user_car_year, user_brand,car_user_id) VALUES ('69-BV-00',2000,'Volkswagen',3);
+
+INSERT INTO user_car (user_car_plate, user_car_year, user_brand,car_user_id) VALUES ('42-SK-01',2020,'McLaren',4);
+
+
+INSERT INTO reserve (reserve_ask_time, reserve_start_time, reserve_end_time, reserve_car_id, reserve_parking_slot_id) VALUES ('2021-01-01 12:00:00', '2021-01-01 12:30:00', '2021-01-01 14:30:00', 1, 6);
+
+INSERT INTO reserve (reserve_ask_time, reserve_start_time, reserve_end_time,reserve_car_id, reserve_parking_slot_id) VALUES ('2021-01-02 14:00:00', '2021-01-02 14:30:00', '2021-01-02 18:30:00', 2, 12);
+
+INSERT INTO reserve (reserve_ask_time, reserve_start_time, reserve_end_time, reserve_car_id, reserve_parking_slot_id) VALUES ('2021-01-02 15:00:00', '2021-01-01 15:30:00', '2021-01-01 17:30:00', 3, 33);
+
+INSERT INTO reserve (reserve_ask_time, reserve_start_time, reserve_end_time,reserve_car_id, reserve_parking_slot_id) VALUES ('2021-01-20 18:00:00', '2021-01-20 19:00:00', '2021-01-20 20:30:00', 4, 25);
