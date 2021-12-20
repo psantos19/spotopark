@@ -52,7 +52,7 @@ public class UtilizadorController {
         Integer inserted = utilizadorRepository.registerUtilizador(utilizadorId);
         return new Response(inserted+" registration created",utilizadorId);
     }
-
+    
     @DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response deleteUtilizador(@PathVariable int id) {
         logger.info("Deleting user with id " + id);
