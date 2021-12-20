@@ -29,8 +29,8 @@ public class utilizador {
     @Column(name = "utilizador_email", length = 100)
     private String email;
 
-    //@Column(name = "utilizador_coordinates", length = 100)
-    //private String coordinates;
+    @Column(name = "utilizador_coordinates", length = 100)
+    private String coordinates;
 
     public utilizador() {
     }
@@ -75,12 +75,12 @@ public class utilizador {
         this.email = email;
     }
 
-    /*public String getCoordinates() {
+    public String getCoordinates() {
         return coordinates;
     }
 
     public void setCoordinates(String coordinates) {
         this.coordinates = coordinates;
-    }*/
+    }
 
 }
