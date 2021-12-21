@@ -10,9 +10,9 @@ public interface ParkingSlotTypeRepository extends CrudRepository <parkingSlotTy
 
         // Ver quantos lugares existem de um certo tipo
         // https://spotopark-projeto.herokuapp.com/api/parking_slot_type/type
-    String resQuery3 = "SELECT type_name, count(*) " + "from parking_slot, parking_slot_type "
-            + "where parking_type_id = type_id " 
-            + "group by type_name";
+    String resQuery3 = "SELECT type_name, count(*) " 
+                + "from parking_slot, parking_slot_type "
+                + "where parking_type_id = type_id";
 
     @Query(value = "select type_name, count(*) from parking_slot, parking_slot_type where parking_type_id = type_id", nativeQuery = true)
     Iterable<parkingSlotType> getParkType();
@@ -21,8 +21,8 @@ public interface ParkingSlotTypeRepository extends CrudRepository <parkingSlotTy
                 + "from parking_slot "
                 + "where parking_type_id = '1' ";
 
-    @Query(value = "select parking_slot_number, parking_type_id from parking_slot where parking_type_id = 1", nativeQuery = true)
-    Iterable<parkingSlotType> getSpotTypes();
+    @Query(value = "select parking_slot_number, parking_type_id from parking_slot where parking_type_id = :id", nativeQuery = true)
+    Iterable<parkingSlotType>getSpotTypes(int id);
 }
 
 
