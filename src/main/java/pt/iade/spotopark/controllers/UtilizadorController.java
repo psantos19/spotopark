@@ -46,7 +46,6 @@ public class UtilizadorController {
     }
      
 
-     
     /*@PostMapping(path = "/new", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response saveUtilizador(@RequestBody utilizador utilizadorId) {
         logger.info("Registering user with id " + utilizadorId.getId() +
