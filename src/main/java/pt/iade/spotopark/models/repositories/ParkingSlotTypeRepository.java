@@ -22,7 +22,7 @@ public interface ParkingSlotTypeRepository extends CrudRepository <parkingSlotTy
                 + "where parking_type_id = 1";
 
     @Query(value = "select parking_slot_number, parking_type_id from parking_slot where parking_type_id = 1", nativeQuery = true)
-    Iterable<parkingSlotType>getSpotTypes(int id);
+    Iterable<parkingSlotType>getSpotTypes();
 }
 
 
