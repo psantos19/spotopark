@@ -37,22 +37,23 @@ public class UtilizadorController {
             return _utilizador.get();
     }
 
-    /*
-     * @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE) public
-     * utilizador saveUtilizador(@RequestBody utilizador utilizador) { utilizador
-     * savedUtilizador = utilizadorRepository.save(utilizador);
-     * logger.info("Saving user with id " + savedUtilizador.getId()); return
-     * savedUtilizador; }
-     */
+    
+    @PostMapping(path = "/new", produces = MediaType.APPLICATION_JSON_VALUE) 
+    public utilizador saveUsers(@RequestBody utilizador utilizador) { 
+        utilizador savedUtilizador = utilizadorRepository.save(utilizador);
+            logger.info("Saving user with id " + savedUtilizador.getId()); 
+        return savedUtilizador; 
+    }
+     
 
      
-    @PostMapping(path = "/new", produces = MediaType.APPLICATION_JSON_VALUE)
+    /*@PostMapping(path = "/new", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response saveUtilizador(@RequestBody utilizador utilizadorId) {
         logger.info("Registering user with id " + utilizadorId.getId() +
                 " with name " + utilizadorId.getName());
         String savedUtilizador = utilizadorRepository.registerUtilizador(utilizadorId);
         return new Response(savedUtilizador + " registration created", utilizadorId); 
-    }
+    }*/
     
     @DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Response deleteUtilizador(@PathVariable int id) {
