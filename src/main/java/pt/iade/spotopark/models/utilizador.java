@@ -20,13 +20,13 @@ public class utilizador {
     @Column(name = "utilizador_name", nullable = false, length = 60)
     private String name;
 
-    @Column(name = "utilizador_password", length = 60)
+    @Column(name = "utilizador_password", nullable = false, length = 60)
     private String password;
 
     @Column(name = "utilizador_bdate", nullable = false)
     private LocalDate bdate;
 
-    @Column(name = "utilizador_email", length = 100)
+    @Column(name = "utilizador_email", nullable = false, length = 100)
     private String email;
 
     public utilizador() {
