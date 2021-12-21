@@ -50,7 +50,7 @@ public class UtilizadorController {
     public Response saveUtilizador(@RequestBody utilizador utilizadorId) {
         logger.info("Registering user with id " + utilizadorId.getId() +
                 " with name " + utilizadorId.getName());
-        Integer savedUtilizador = utilizadorRepository.registerUtilizador(utilizadorId);
+        String savedUtilizador = utilizadorRepository.registerUtilizador(utilizadorId);
         return new Response(savedUtilizador + " registration created", utilizadorId); 
     }
     

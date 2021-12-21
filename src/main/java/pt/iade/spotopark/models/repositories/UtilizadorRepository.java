@@ -16,5 +16,5 @@ public interface UtilizadorRepository extends CrudRepository<utilizador, Integer
             "utilizador_bdate, utilizador_email)"
             + "values(:#{#utilizador.name}, :#{#utilizador.password}, "
             + ":#{#utilizador.bdate}, :#{#utilizador.email})", nativeQuery = true)
-    Integer registerUtilizador(@Param("utilizador") utilizador utilizador);
+    String registerUtilizador(@Param("utilizador") utilizador utilizador);
 }
