@@ -17,6 +17,7 @@ import pt.iade.spotopark.models.repositories.UserCarRepository;
 public class UserCarController {
     private final Logger logger = LoggerFactory.getLogger(UserCarRepository.class);
     @Autowired
+    
     private UserCarRepository user_carRepository;
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<userCar> getUser_car()
@@ -36,7 +37,7 @@ public class UserCarController {
     }
 
     @PostMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public  userCar saveUser_car(@RequestBody userCar user_car) {
+    public userCar saveUser_car(@RequestBody userCar user_car) {
         userCar savedUser_car = user_carRepository.save(user_car);
         logger.info("Saving user with id " + savedUser_car.getUserCarId());
         return savedUser_car;

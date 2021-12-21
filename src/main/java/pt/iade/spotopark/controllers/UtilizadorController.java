@@ -18,10 +18,10 @@ import pt.iade.spotopark.models.repositories.UtilizadorRepository;
 public class UtilizadorController {
     private final Logger logger = LoggerFactory.getLogger(UtilizadorRepository.class);
     @Autowired
+   
     private UtilizadorRepository utilizadorRepository;
-
     @GetMapping(path = "", produces = MediaType.APPLICATION_JSON_VALUE)
-    public Iterable<utilizador> getutilizador()
+    public Iterable<utilizador> getUtilizador()
     {
         logger.info("Sending all users!");
         return utilizadorRepository.findAll();
@@ -50,8 +50,8 @@ public class UtilizadorController {
     public Response saveUtilizador(@RequestBody utilizador utilizadorId) {
         logger.info("Registering user with id " + utilizadorId.getId() +
                 " with name " + utilizadorId.getName());
-        utilizador integer = utilizadorRepository.registerUtilizador(utilizadorId);
-        return new Response(integer +" registration created",utilizadorId);
+        Integer savedUtilizador = utilizadorRepository.registerUtilizador(utilizadorId);
+        return new Response(savedUtilizador + " registration created", utilizadorId); 
     }
     
     @DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
