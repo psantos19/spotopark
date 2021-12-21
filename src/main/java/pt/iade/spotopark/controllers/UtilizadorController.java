@@ -50,8 +50,8 @@ public class UtilizadorController {
     public Response saveUtilizador(@RequestBody utilizador utilizadorId) {
         logger.info("Registering user with id " + utilizadorId.getId() +
                 " with name " + utilizadorId.getName());
-        utilizador inserted = utilizadorRepository.registerUtilizador(utilizadorId);
-        return new Response(inserted+" registration created",utilizadorId);
+        utilizador integer = utilizadorRepository.registerUtilizador(utilizadorId);
+        return new Response(integer +" registration created",utilizadorId);
     }
     
     @DeleteMapping(path = "/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
