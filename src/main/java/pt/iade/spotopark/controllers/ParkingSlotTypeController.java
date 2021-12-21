@@ -57,4 +57,9 @@ public class ParkingSlotTypeController {
         public Iterable<parkingSlotType> getParkType() {
         return parking_slot_typeRepository.getParkType();
    }
+
+   @GetMapping(path = "/spotype", produces= MediaType.APPLICATION_JSON_VALUE)
+        public Iterable<parkingSlotType> getSpotTypes() {
+        return parking_slot_typeRepository.getSpotTypes();
+   }
 }

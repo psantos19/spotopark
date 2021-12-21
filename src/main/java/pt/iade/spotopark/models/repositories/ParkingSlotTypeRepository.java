@@ -16,5 +16,14 @@ public interface ParkingSlotTypeRepository extends CrudRepository <parkingSlotTy
 
     @Query(value = "select type_name, count(*) from parking_slot, parking_slot_type where parking_type_id = type_id", nativeQuery = true)
     Iterable<parkingSlotType> getParkType();
+
+    String resQuery4 = "SELECT parking_slot_number " 
+                + "from parking_slot "
+                + "where parking_type_id = '1' " 
+                + "group by parking_type_id";
+
+    @Query(value = "select parking_slot_number from parking_slot where parking_type_id = '1' ", nativeQuery = true)
+    Iterable<parkingSlotType> getSpotTypes();
 }
+
 
