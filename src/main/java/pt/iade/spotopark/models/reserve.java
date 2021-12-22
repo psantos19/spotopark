@@ -61,8 +61,8 @@ public class reserve {
     }
 
     public void setReserveEndTime(Timestamp reserveEndTime) {
-        this.reserveEndTime = reserveEndTime;*/
-    }
+        this.reserveEndTime = reserveEndTime;
+    }*/
 
     public int getReserveCarId() {
         return reserveCarId;
