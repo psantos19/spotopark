@@ -64,6 +64,7 @@ public class ParkingSlotController {
    
     @GetMapping(path = "/spotype/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<parkingSlot> getSpotTypes(@PathVariable int id) {
+        logger.info("Spotype id: "+ id);
         return parking_slotRepository.getSpotTypes(id);
     }
 }
