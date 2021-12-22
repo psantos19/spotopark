@@ -9,16 +9,16 @@ public interface ParkingSlotRepository extends CrudRepository<parkingSlot, Integ
     // ver quantos lugares tem um parque
     // https://spotopark-projeto.herokuapp.com/api/parking/parking_slot
     String resQuery1 = "select park_address , count(*) "
-    + "from parking , parking_slot " +
-    "where park_id = parking_park_id " + 
-    "group by park_address"; 
+            + "from parking , parking_slot " +
+            "where park_id = parking_park_id " +
+            "group by park_address";
 
-    @Query(value="select * from parking_slot, parking where park_id = parking_park_id and parking_park_id = :id", nativeQuery=true)
-    Iterable<parkingSlot>getParkSpots(int id);
+    @Query(value = "select * from parking_slot, parking where park_id = parking_park_id and parking_park_id = :id", nativeQuery = true)
+    Iterable<parkingSlot> getParkSpots(int id);
 
-    String resQuery3 = "SELECT parking_slot_number , parking_type_id from parking_slot where parking_type_id = :id";
+    String resQuery3 = "select parking_slot_number, parking_type_id from parking_slot where parking_type_id = type_id";
 
-    @Query(value = resQuery3, nativeQuery = true)
+    @Query(value = "select parking_slot_number, parking_type_id from parking_slot where parking_type_id = :id", nativeQuery = true)
     Iterable<parkingSlot> getSpotTypes(int id);
-    
+
 }

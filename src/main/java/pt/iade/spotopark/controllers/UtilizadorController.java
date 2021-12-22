@@ -42,7 +42,7 @@ public class UtilizadorController {
     public utilizador saveUsers(@RequestBody utilizador utilizador) { 
         utilizador savedUtilizador = utilizadorRepository.save(utilizador);
             logger.info("Saving user with id " + savedUtilizador.getId()); 
-        return savedUtilizador; 
+        return savedUtilizador;
     }
      
 
