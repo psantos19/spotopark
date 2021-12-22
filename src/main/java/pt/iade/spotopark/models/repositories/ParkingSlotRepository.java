@@ -6,18 +6,15 @@ import org.springframework.data.repository.CrudRepository;
 import pt.iade.spotopark.models.parkingSlot;
 
 public interface ParkingSlotRepository extends CrudRepository<parkingSlot, Integer> {
-    // ver quantos lugares tem um parque
-    // https://spotopark-projeto.herokuapp.com/api/parking/parking_slot
-    String resQuery1 = "select park_address , count(*) "
-            + "from parking , parking_slot " +
-            "where park_id = parking_park_id " +
-            "group by park_address";
-
-    @Query(value = "select * from parking_slot, parking where park_id = parking_park_id and parking_park_id = :id", nativeQuery = true)
-    Iterable<parkingSlot> getParkSpots(int id);
-
 
     @Query(value = "select * from parking_slot where parking_type_id = :id", nativeQuery = true)
-    Iterable<parkingSlot> getSpotTypes(int id);
+    Iterable<parkingSlot> getParkSpots(int id);
+
+    @Query(value = "select * from parking_slot where parking_type_id = :id and parking_park_id = 1", nativeQuery = true)
+    Iterable<parkingSlot> getSpotTypes1(int id);
+
+    @Query(value = "select * from parking_slot where parking_type_id = :id and parking_park_id = 2", nativeQuery = true)
+    Iterable<parkingSlot> getSpotTypes2(int id);
+
 
 }

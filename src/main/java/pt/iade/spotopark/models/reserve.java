@@ -18,10 +18,12 @@ public class reserve {
     private int reserveId;
     @Column(name = "reserve_ask_time", nullable = false)
     private Timestamp reserveAskTime;
-    @Column(name = "reserve_start_time", nullable = false)
+
+    /*@Column(name = "reserve_start_time", nullable = false)
     private Timestamp reserveStartTime;
     @Column(name = "reserve_end_time", nullable = false)
-    private Timestamp reserveEndTime;
+    private Timestamp reserveEndTime;*/
+
     @Column(name = "reserve_car_id", nullable = false)
     private int reserveCarId;
     @Column(name = "reserve_parking_slot_id", nullable = false)
@@ -46,7 +48,7 @@ public class reserve {
         this.reserveAskTime = reserveAskTime;
     }
 
-    public Timestamp getReserveStartTime() {
+    /*public Timestamp getReserveStartTime() {
         return reserveStartTime;
     }
 
@@ -59,7 +61,7 @@ public class reserve {
     }
 
     public void setReserveEndTime(Timestamp reserveEndTime) {
-        this.reserveEndTime = reserveEndTime;
+        this.reserveEndTime = reserveEndTime;*/
     }
 
     public int getReserveCarId() {
