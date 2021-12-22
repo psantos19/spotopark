@@ -53,13 +53,13 @@ public class ParkingSlotTypeController {
         return new Response("Deleted parking_slot_type with id " + id_parking_slot_type, null);
     }
 
-    @GetMapping(path = "/type", produces= MediaType.APPLICATION_JSON_VALUE)
-        public Iterable<parkingSlotType> getParkType() {
+    @GetMapping(path = "/type", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<parkingSlotType> getParkType() {
         return parking_slot_typeRepository.getParkType();
-   }
+    }
 
-   @GetMapping(path = "/spotype", produces= MediaType.APPLICATION_JSON_VALUE)
-        public Iterable<parkingSlotType> getSpotTypes() {
-        return parking_slot_typeRepository.getSpotTypes();
-   }
+    @GetMapping(path = "/spotype", produces = MediaType.APPLICATION_JSON_VALUE)
+    public Iterable<parkingSlotType> getSpotTypes(@PathVariable int id) {
+        return parking_slot_typeRepository.getSpotTypes(id);
+    }
 }
