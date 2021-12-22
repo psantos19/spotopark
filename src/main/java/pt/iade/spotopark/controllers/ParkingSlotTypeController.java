@@ -16,6 +16,7 @@ import pt.iade.spotopark.models.repositories.ParkingSlotTypeRepository;
 @RequestMapping(path = "/api/parking_slot_type")
 public class ParkingSlotTypeController {
     private final Logger logger = LoggerFactory.getLogger(ParkingSlotTypeRepository.class);
+
     @Autowired
     private ParkingSlotTypeRepository parking_slot_typeRepository;
 
@@ -58,7 +59,7 @@ public class ParkingSlotTypeController {
         return parking_slot_typeRepository.getParkType();
     }
 
-    @GetMapping(path = "/spotype", produces = MediaType.APPLICATION_JSON_VALUE)
+    @GetMapping(path = "/spotype/{id:[0-9]+}", produces = MediaType.APPLICATION_JSON_VALUE)
     public Iterable<parkingSlotType> getSpotTypes(@PathVariable int id) {
         return parking_slot_typeRepository.getSpotTypes(id);
     }
