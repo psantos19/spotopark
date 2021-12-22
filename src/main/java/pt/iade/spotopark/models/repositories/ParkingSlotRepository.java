@@ -15,4 +15,6 @@ public interface ParkingSlotRepository extends CrudRepository<parkingSlot, Integ
 
     @Query(value="select * from parking_slot, parking where park_id = parking_park_id and parking_park_id = :id", nativeQuery=true)
     Iterable<parkingSlot>getParkSpots(int id);
+
+    
 }
