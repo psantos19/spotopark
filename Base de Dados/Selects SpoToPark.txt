@@ -1,0 +1,11 @@
+//mostra o nome do parque e quantos lugares existem em cada um
+select park_address , count(*) from parking , parking_slot
+where park_id = parking_park_id
+group by park_address
+
+//Tipos de lugar e lugares disponiveis de cada um, ao todo
+select type_name "Tipo de Lugar", count(*) "Lugares" from parking_slot, parking_slot_type where parking_type_id = type_id group by type_name
+
+//devolve o id do parque, diz se é o 1 ou o 2 e diz onde se situa
+select reserve_id , park_id, park_address from reserve , parking_slot , parking where reserve_parking_slot_id = parking_slot_id
+and park_id = parking_park_id
