@@ -1,9 +1,0 @@
-// ver quantos lugares tem um parque
-https://spotopark-projeto.herokuapp.com/api/parking/parking_slot/1
-https://spotopark-projeto.herokuapp.com/api/parking/parking_slot/2
-
-// saber qual o parque associado a uma reserva
-https://spotopark-projeto.herokuapp.com/api/reserve/park
-
-// ver quantos lugares existem de um certo tipo
-https://spotopark-projeto.herokuapp.com/api/parking_slot_type/type
